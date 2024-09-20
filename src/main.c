@@ -6,12 +6,16 @@
 /*   By: ner-roui <ner-roui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 17:57:45 by ner-roui          #+#    #+#             */
-/*   Updated: 2024/09/19 20:01:52 by ner-roui         ###   ########.fr       */
+/*   Updated: 2024/09/20 10:02:07 by ner-roui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../include/fractol.h"
 
+// void leaks(void)
+// {
+// 	system("leaks fractol");
+// }
 int	draw_fractal(t_fractal *fractal, char *name)
 {
 	if (ft_strncmp(name, "mandelbrot", 10) == 0)
@@ -20,7 +24,7 @@ int	draw_fractal(t_fractal *fractal, char *name)
 	{
 		draw_julia(fractal);
 	}
-	else if (ft_strncmp(name, "ship", 5) == 0)
+	else if (ft_strncmp(name, "burningship", 5) == 0)
 		draw_burning_ship(fractal);
 	else
 	{
@@ -80,6 +84,7 @@ int	main(int argc, char **argv)
 {
 	t_fractal	*fractal;
 
+	// atexit(leaks);
 	if ((2 == argc && !ft_strncmp(argv[1], "mandelbrot", 10))
 	|| (4 == argc && !ft_strncmp(argv[1], "julia", 5))
 	|| (2 == argc && !ft_strncmp(argv[1], "burningship", 10)))

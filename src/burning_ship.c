@@ -6,7 +6,7 @@
 /*   By: ner-roui <ner-roui@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 18:30:27 by ner-roui          #+#    #+#             */
-/*   Updated: 2024/09/19 18:30:45 by ner-roui         ###   ########.fr       */
+/*   Updated: 2024/09/20 09:51:11 by ner-roui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	calculate_burning_ship(t_fractal *fractal)
 	int		i;
 	double	x_temp;
 
-	fractal->name = "ship";
+	fractal->name = "burningship";
 	i = 0;
 	fractal->zx = 0.0;
 	fractal->zy = 0.0;
